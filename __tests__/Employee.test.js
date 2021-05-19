@@ -11,13 +11,31 @@ describe('employee', () =>{
             expect(employee.email).toEqual('robert@example.com');
         });
     
-        it('should throw an error if provided no arguments', () =>{
-            const cb = () => new Employee();
+      
+
+        it('should return name', () =>{
+            const employee = new Employee('robert', 12345, 'robert@example.com');
     
-            expect(cb).toThrow();
+            expect(employee.getName()).toEqual('robert');
         });
 
+        it('should return email', () =>{
+            const employee = new Employee('robert', 12345, 'robert@example.com');
+    
+            expect(employee.getEmail()).toEqual('robert@example.com');
+        });
 
+        it('should return id', () =>{
+            const employee = new Employee('robert', 12345, 'robert@example.com');
+    
+            expect(employee.getId()).toEqual(12345);
+        });
+
+        it('should return "Employee"', () =>{
+            const employee = new Employee('robert', 12345, 'robert@example.com');
+    
+            expect(employee.getRole()).toEqual('Employee');
+        });
     })
     
 
