@@ -69,7 +69,7 @@ function EngineerHTML(obj){
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${obj.getId()}</li>
                 <li class="list-group-item">email: ${obj.getEmail()}</li>
-                <li class="list-group-item">Github: ${obj.getGithub()}</li>
+                <li class="list-group-item">Github: <a href="https://www.github.com/${obj.getGithub()}">${obj.getGithub()}</a> </li>
             </ul>
         </div>
     </div>
